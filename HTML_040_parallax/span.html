@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Span Tag</title>
+    <style>
+      /*
+        span tag
+        문장내에 있는 일부의 text에 style을 지정하고자 할 때
+        */
+      span {
+        font-weight: bold;
+        border: 1px solid green;
+      }
+      span.box {
+        display: inline-block;
+        width: 200px;
+      }
+      span.hidden {
+        visibility: hidden;
+        width: 0vh;
+        transition: 1s;
+      }
+      p.visi:hover span.hidden {
+        visibility: visible;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Republic Of <span>Korea</span></p>
+    <p>Republic Of <span class="box">Korea</span>viva</p>
+    <p class="visi">Republic Of <span class="box hidden">Korea</span>viva</p>
+
+    <p>Republic Of <b>Korea</b></p>
+    <p>Republic Of <strong>Korea</strong></p>
+    <p>Republic Of <em>Korea</em></p>
+    <p>Republic Of <del>Korea</del></p>
+    <p>Republic Of <small>Korea</small></p>
+    <p>Republic Of <ins>Korea</ins></p>
+    <p>
+      Republic Of <span>Korea<sup>s</sup></span>
+    </p>
+    <p>Republic Of <mark>Korea</mark></p>
+  </body>
+</html>
