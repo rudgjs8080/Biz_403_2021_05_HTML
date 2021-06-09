@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic_02 HTML</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 10px auto;
+      }
+      table td {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>이름</td>
+        <td>전화번호</td>
+        <td>주소</td>
+      </tr>
+      <tr>
+        <td>홍길동</td>
+        <td>010-123-123</td>
+        <td>울릉도</td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    /*
+      위에 보이는 table을 JS 코드를 사용하여 만드시오*/
+
+    const doc = document;
+    let body = doc.querySelector("body");
+    let table = doc.createElement("table");
+
+    let row1 = doc.createElement("tr");
+
+    let _1_1 = doc.createElement("td");
+    _1_1.innerHTML = "이름";
+    row1.appendChild(_1_1);
+    let _1_2 = doc.createElement("td");
+    _1_2.innerHTML = "전화번호";
+    row1.appendChild(_1_2);
+    let _1_3 = doc.createElement("td");
+    _1_3.innerHTML = "주소";
+    row1.appendChild(_1_3);
+
+    table.appendChild(row1);
+
+    let row2 = doc.createElement("tr");
+
+    let _2_1 = doc.createElement("td");
+    _2_1.innerHTML = "홍길동";
+    row2.appendChild(_2_1);
+    let _2_2 = doc.createElement("td");
+    _2_2.innerHTML = "010-123-123";
+    row2.appendChild(_2_2);
+    let _2_3 = doc.createElement("td");
+    _2_3.innerHTML = "울릉도";
+    row2.appendChild(_2_3);
+    table.appendChild(row2);
+
+    let row3 = doc.createElement("tr");
+    let _3_1 = doc.createElement("td");
+    _3_1.innerHTML = "이몽룡";
+    row3.appendChild(_3_1);
+    table.appendChild(row3);
+
+    body.appendChild(table);
+
+    // js 배열을 상요하여
+
+    const titles = ["이름", "전화번호", "주소"];
+    const data = ["홍길동", "010", "서울시"];
+
+    let table1 = doc.createElement("table");
+    let tr1 = doc.createElement("tr");
+    for (let i = 0; i < titles.length; i++) {
+      let td = doc.createElement("td");
+      td = titles[i];
+      tr.appendChild(td);
+    }
+    table1.appendChild(tr);
+  </script>
+</html>

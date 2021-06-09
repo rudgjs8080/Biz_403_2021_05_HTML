@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 80%;
+        margin: 10px auto;
+      }
+      table td {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const datas = [
+      ["이름", "전화번호", "주소"],
+      ["홍길동", "010-1", "서울시"],
+      ["성춘향", "010-2", "익산시"],
+      ["이몽룡", "010-3", "남원시"],
+    ];
+    let table = document.createElement("table");
+    for (let i = 0; i < datas.length; i++) {
+      let tr = document.createElement("tr");
+
+      for (let j = 0; j < datas[i].length; j++) {
+        let td = document.createElement("td");
+        td.innerHTML = datas[i][j];
+        tr.appendChild(td);
+      }
+      table.appendChild(tr);
+    }
+    document.querySelector("body").appendChild(table);
+  </script>
+</html>
