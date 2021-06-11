@@ -6,25 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>최초화면</title>
     <style>
-      * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-      }
-
       body {
         background: linear-gradient(130deg, #7389d0, #eebdc3);
         background-attachment: fixed;
       }
-      
-      div{
-        display: flex;
-        margin-bottom: -2vh;
-        float: right;
-        
-        justify-content: flex-end;     
+      form {
+        flex-direction: column;
+        text-align: right;
       }
-     
+      button {
+        position:relative;
+        left:83%;
+        width:8%;
+        height:20px;
+        background: linear-gradient(125deg,#ebe5d2,#df9ce5,#ec81c3);
+        background-position: left;
+        background-size: 200%;
+        
+        font-weight: bold;
+        border:none;
+        cursor:pointer;
+        transition: 0.5s;
+        
+      }
+      
       h1,
       h4 {
         color: white;
@@ -33,7 +38,7 @@
       h1 {
         font-size: 80px;
         text-align: center;
-        
+        height: 50px;
       }
       h4 {
         font-size: 28px;
@@ -51,29 +56,22 @@
       }
       nav {
         vertical-align: top;
-        border: 1px solid red;
-        padding: 20px;
         display: flex;
         margin-left: 0px auto;
                 
       }
       nav li {
         color: rgb(255, 255, 255);
-        font-size: 20px;
+        font-size: 15px;
       }
     </style>
   </head>
   <body>
-    <div class="main_div">
-      <div class="input">ID : <input class="id" name:"ID" type="text" style="border:1px solid white; background: transparent;"></div>
-      <div class="input">PW : <input class="pw" name:"PW" type="text" style="border:1px solid white; background: transparent;"></div>
-      <div class="input">
-        <button name="login" style="border:1px solid white; background: transparent;" ><a href="../weather_ootd/login.html"></a>LOGIN</button>
-      </div>
-      <div class="input" >
-        <button name="join"style="border:1px solid white; background: transparent;"><a href="../weather_ootd/join.html"></a>회원가입</button>
-      </div>
-    </div>
+    <form>
+      <div class="input">ID : <input type="text">PW : <input type="password"></div>
+    </form>
+    <button name="login"><a href="../weather_ootd/login.html">접속</a></button>
+    <button name="join"><a href="../weather_ootd/join.html">회원가입</a></button>
     <h1>W O O</h1>
     <h4>WEATHER & OOTD</h4>
     <nav>
@@ -89,7 +87,12 @@
       
     </nav>
     <p>온도 : ?  날씨 : ?</p>
-
-    
   </body>
+  <script>
+      document.querySelector("button#login").addEventListener("click", function (ev) {
+      alert("WOO에 접속하였습니다");
+      document.querySelector("button#join").addEventListener("click", function (ev) {
+      alert("회원가입을 진행합니다");
+    });
+  </script>
 </html>

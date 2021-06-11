@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>최초화면</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: linear-gradient(130deg, #7389d0, #eebdc3);
+        background-attachment: fixed;
+      }
+      div#login {
+        padding: 10px;
+      }
+      div#login div {
+        display: flex;
+      }
+      div#login label {
+        padding: 0px 10px 0px 10px;
+      }
+      div#login label:nth-of-type(1) {
+        margin-left: auto;
+      }
+      div#login input {
+        border: 1px solid black;
+        border-radius: 15px;
+        background-color: transparent;
+      }
+
+      div#main {
+        border:1px solid red;
+        padding: 15px;
+      }
+      div#bottom {
+        display: flex;
+        border: 1px solid blue;
+        height: 400px;
+        padding: 10px;
+      }
+      div#b_left {
+        flex: 1;
+        border: 1px solid black;
+        width: 30%;
+        justify-items: left;
+        padding: 10px;
+      }
+      div#b_right {
+        flex: 1;
+        border: 1px solid black;
+        width: 30%;
+        justify-items: right;
+      }
+      div#b_center {
+        flex: 1;
+        border: 1px solid black;
+        padding: 15px;
+      }
+      h1,
+      h4 {
+        color: white;
+        text-shadow: 0px 0px 20px rgb(234 237 176);
+      }
+      h1 {
+        font-size: 80px;
+        text-align: center;
+      }
+      h4 {
+        font-size: 28px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login">
+      <div>
+        <label>ID : </label><input type="text" /><label> PW : </label
+        ><input type="password" />
+      </div>
+    </div>
+    <div id="main">
+      <h1>W O O</h1>
+      <h4>WEATHER & OOTD</h4>
+    </div>
+    <div id="bottom">
+      <div id="b_left"><ul>
+        <li>강수</li>
+        <li>습도</li>
+        <li>바람</li>
+        <li>미세먼지</li>
+        <li>초미세먼지</li>
+        <li>자외선</li>
+        </ul></div>
+      <div id="b_center"><img src="1.png" alt=""></img>
+        <label>온도</label>
+        <label>?</label>
+        <label>날씨</label>
+        <label>?</label>
+
+      </div>
+      <div id="b_right">오른쪽</div>
+    </div>
+  </body>
+  <script>
+      document.querySelector("button#login").addEventListener("click", function (ev) {
+      alert("WOO에 접속하였습니다");
+      document.querySelector("button#join").addEventListener("click", function (ev) {
+      alert("회원가입을 진행합니다");
+    });
+  </script>
+</html>
