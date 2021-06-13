@@ -31,6 +31,9 @@
         border: 1px solid black;
         border-radius: 15px;
         background-color: transparent;
+        outline: 0;
+        padding: 5px;
+        text-align: center;
       }
 
       div#main {
@@ -41,15 +44,23 @@
         display: flex;
         border: 1px solid blue;
         height: 400px;
-        padding: 10px;
+        
       }
       div#b_left {
+        display: flex;
         flex: 1;
         border: 1px solid black;
         width: 30%;
         justify-items: left;
         padding: 10px;
+        flex-direction: column;
       }
+      div#b_left_1{
+        border:1px solid red;
+        flex:1;
+        padding:1px;
+      }
+      
       div#b_right {
         flex: 1;
         border: 1px solid black;
@@ -57,9 +68,18 @@
         justify-items: right;
       }
       div#b_center {
+        display: flex;
         flex: 1;
         border: 1px solid black;
-        padding: 15px;
+        flex-direction: column;
+      }
+      div#c_1{
+        border: 1px solid red;
+        flex:9;
+      }
+      div#c_2{
+        border: 1px solid red;
+        flex:1;
       }
       h1,
       h4 {
@@ -67,11 +87,11 @@
         text-shadow: 0px 0px 20px rgb(234 237 176);
       }
       h1 {
-        font-size: 80px;
+        font-size: 90px;
         text-align: center;
       }
       h4 {
-        font-size: 28px;
+        font-size: 32px;
         text-align: center;
       }
     </style>
@@ -79,8 +99,8 @@
   <body>
     <div id="login">
       <div>
-        <label>ID : </label><input type="text" /><label> PW : </label
-        ><input type="password" />
+        <label>ID : </label><input type="text" placeholder="ID를 입력하세요"/>
+        <label> PW : </label><input type="password" placeholder="PW를 입력하세요"/>
       </div>
     </div>
     <div id="main">
@@ -88,19 +108,18 @@
       <h4>WEATHER & OOTD</h4>
     </div>
     <div id="bottom">
-      <div id="b_left"><ul>
-        <li>강수</li>
-        <li>습도</li>
-        <li>바람</li>
-        <li>미세먼지</li>
-        <li>초미세먼지</li>
-        <li>자외선</li>
-        </ul></div>
-      <div id="b_center"><img src="1.png" alt=""></img>
-        <label>온도</label>
-        <label>?</label>
-        <label>날씨</label>
-        <label>?</label>
+      <div id="b_left">
+        <div id="b_left_1">강수</div>
+        <div id="b_left_1">습도</div>
+        <div id="b_left_1">바람</div>
+        <div id="b_left_1">미세먼지</div>
+        <div id="b_left_1">초미세먼지</div>
+        <div id="b_left_1">자외선</div>
+    </div>
+    <div id="b_center">
+        <div id="c_1"><img src="1.png" alt=""></img></div>
+        <div id="c_2"><label>온도</label><label>?</label></div>
+        <div><label>날씨</label><label>?</label></div>
 
       </div>
       <div id="b_right">오른쪽</div>
