@@ -352,9 +352,6 @@
   <body>
     <div class="container">
       <div class="login">
-        <label>ID</label><input type="text" placeholder="ID를 입력하세요" />
-        <label>PW</label><input type="password" placeholder="PW를 입력하세요" />
-        <button class="1">login</button>
         <button class="2">Join</button>
       </div>
 
@@ -457,4 +454,13 @@
       <div class="footer">footer</div>
     </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelector("button.1").addEventListener("click", (ev) => {
+        alert("접속되었습니다");
+
+        document.location.href = "http://127.0.0.1:5501/weather_ootd/.html";
+      });
+    });
+  </script>
 </html>
