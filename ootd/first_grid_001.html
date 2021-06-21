@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>login_grid</title>
     <style>
       * {
         box-sizing: border-box;
@@ -29,12 +29,53 @@
           "footer footer footer";
         margin: 0 auto;
       }
-      .logout {
-        border-radius: 5px;
+
+      .login {
         grid-area: login;
+        justify-self: end;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        padding: 10px;
       }
 
-      .logout button:hover {
+      .login input:hover {
+        background: linear-gradient(125deg, #ebe5d2, #df9ce5);
+        background-position: left;
+        background-size: 200%;
+        border: 1px solid gray;
+        transition: 0.5s;
+      }
+
+      .login label {
+        padding: 10px;
+        padding: 0px 10px 0px 10px;
+        color: white;
+      }
+
+      .login label:nth-of-type(1) {
+        margin-left: auto;
+      }
+
+      .login button:nth-of-type(1) {
+        margin-left: 10px;
+      }
+
+      .login input {
+        border: 1px solid white;
+        border-radius: 15px;
+        background-color: transparent;
+        outline: 0;
+        padding: 3px;
+        text-align: center;
+      }
+
+      .login button {
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      .login button:hover {
         cursor: pointer;
         font-size: 15px;
         transition: 0.5s;
@@ -95,7 +136,6 @@
       }
 
       .footer {
-        border: 1px solid black;
         width: 100%;
         bottom: 0;
         text-align: center;
@@ -129,8 +169,7 @@
       }
 
       figure.snip1200 img {
-        top: -5%;
-        max-width: 100%;
+        max-width: 80%;
         position: relative;
         opacity: 1;
       }
@@ -213,29 +252,12 @@
         position: relative;
         width: 100%;
         padding: 0 20px;
-        margin: 0;
         opacity: 0;
         line-height: 1.6em;
         font-size: 0.9em;
         display: flex;
         flex-direction: row;
         height: 55%;
-      }
-      div.w_data_o {
-        top: 10%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        position: relative;
-        width: 100%;
-        padding: 0 20px;
-        margin: 0;
-        opacity: 0;
-        line-height: 1.6em;
-        font-size: 0.9em;
-        display: flex;
-        flex-flow: column wrap;
-        height: 100%;
-        border: 1px solid black;
       }
       div.w_data_div {
         text-align: center;
@@ -248,23 +270,39 @@
         display: flex;
         flex-direction: column;
       }
+
+      div.w_data_div_a img {
+        width: 40%;
+      }
+      div.w_data_o {
+        top: 40%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        position: relative;
+
+        padding: 0 20px;
+        opacity: 0;
+
+        font-size: 0.9em;
+        display: flex;
+        flex-direction: row;
+        height: 55%;
+      }
+
       div.w_data_div_o {
         text-align: center;
         margin: 0 10px;
         flex: 1;
-        border: 1px solid white;
+
         border-radius: 10px;
         padding-top: 1%;
         font-size: 1em;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+
+        flex-flow: row wrap;
       }
-      div.w_data_div_o img {
-        flex: 1;
-      }
+
       div.w_data_div_a {
-        font-size: 1.5em;
+        font-size: 1.5rem;
         flex: 1;
         padding: 3%;
       }
@@ -310,10 +348,17 @@
 
   <body>
     <div class="container">
-      <div class="logout">
-        <button class="mp"><a href="../weather_ootd/mypage.html">mypage</a></button>
-        <button class="lg"><a href="../weather_ootd/first_grid.html">logout</a></button>
+      <div class="login">
+        <label>ID</label><input type="text" placeholder="ID를 입력하세요" />
+        <label>PW</label><input type="password" placeholder="PW를 입력하세요" />
+        <button class="lg">
+          <a href="../ootd/logout_001.html">login</a>
+        </button>
+        <button class="jo">
+          <a href="../ootd/join_001.html">Join</a>
+        </button>
       </div>
+
       <div class="header">
         <h1 style="font-size: 90px; text-align: center">W O O</h1>
         <h4 style="font-size: 32px; text-align: center">WEATHER & OOTD</h4>
@@ -338,28 +383,28 @@
               <div class="w_data_div">
                 <div class="w_data_div_a">온도</div>
                 <div class="w_data_div_a">
-                  <img src="온도계.png" alt="온도계" style="width: 30%" />
+                  <img src="온도계.png" alt="온도계" />
                 </div>
                 <div class="w_data_div_a">21°</div>
               </div>
               <div class="w_data_div">
                 <div class="w_data_div_a">강수확률</div>
                 <div class="w_data_div_a">
-                  <img src="강수확률.png" alt="강수확률" style="width: 30%" />
+                  <img src="강수확률.png" alt="강수확률" />
                 </div>
                 <div class="w_data_div_a">90%</div>
               </div>
               <div class="w_data_div">
                 <div class="w_data_div_a">습도</div>
                 <div class="w_data_div_a">
-                  <img src="humidity.png" alt="습도계" style="width: 30%" />
+                  <img src="humidity.png" alt="습도계" />
                 </div>
                 <div class="w_data_div_a">80%</div>
               </div>
               <div class="w_data_div">
                 <div class="w_data_div_a">바람</div>
                 <div class="w_data_div_a">
-                  <img src="wind.png" alt="바람" style="width: 30%" />
+                  <img src="wind.png" alt="바람" />
                 </div>
                 <div class="w_data_div_a">약함</div>
               </div>
@@ -372,7 +417,12 @@
         <!-- ----------------------------------------------------------------- -->
         <figure class="snip1200">
           <div>
-            <img class="clothes" src="clothes.png" alt="clothes" />
+            <img
+              class="clothes"
+              src="clothes.png"
+              alt="clothes"
+              style="padding-top: 3%"
+            />
             <p style="margin: 10px; font-size: 20px">
               OOTD 추천을 원하시면 화면에 커서를 올려주세요
             </p>
@@ -380,26 +430,13 @@
           <figcaption class="o">
             <div class="w_data_o">
               <div class="w_data_div_o">
-                <img src="온도계.png" alt="온도계" style="width: 30%" />
+                <img src="formal-shirt.png" alt="온도계" />
               </div>
               <div class="w_data_div_o">
-                <img src="온도계.png" alt="온도계" style="width: 30%" />
+                <img src="male-clothes.png" alt="온도계" />
               </div>
               <div class="w_data_div_o">
-                <img src="온도계.png" alt="온도계" style="width: 30%" />
-              </div>
-              <div class="w_data_div_o">
-                <img src="온도계.png" alt="온도계" style="width: 30%" />
-              </div>
-              <div class="w_data_div_o">
-                <img src="온도계.png" alt="온도계" style="width: 30%" />
-              </div>
-              <div class="w_data_div_o">
-                <img src="온도계.png" alt="온도계" style="width: 30%" />
-              </div>
-
-              <div class="w_data_div_o">
-                <img src="온도계.png" alt="온도계" style="width: 30%" />
+                <img src="polo-shirt.png" alt="온도계" />
               </div>
             </div>
             <div class="heading_o">
@@ -410,15 +447,20 @@
       </div>
 
       <div class="sidebar-b"></div>
-      <div class="footer">footer</div>
+      <div class="footer"></div>
     </div>
   </body>
   <script>
-    document.querySelector("button.mp").addEventListener("click", function (ev) {
-      alert("mypage로 이동합니다");
-    });
-    document.querySelector("button.lg").addEventListener("click", function (ev) {
-      alert("로그아웃 하였습니다");
-    });
+    /* 왜 안되지?? */
+    document
+      .querySelector("button.lg")
+      .addEventListener("click", function (ev) {
+        alert("접속하였습니다");
+      });
+    document
+      .querySelector("button.jo")
+      .addEventListener("click", function (ev) {
+        alert("회원가입을 진행합니다");
+      });
   </script>
 </html>

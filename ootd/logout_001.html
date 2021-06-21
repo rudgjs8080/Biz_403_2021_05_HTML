@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login_grid</title>
+    <title></title>
     <style>
       * {
         box-sizing: border-box;
@@ -39,47 +39,24 @@
         padding: 10px;
       }
 
-      .login input:hover {
-        background: linear-gradient(125deg, #ebe5d2, #df9ce5);
-        background-position: left;
-        background-size: 200%;
-        border: 1px solid gray;
-        transition: 0.5s;
-      }
-
-      .login label {
-        padding: 10px;
-        padding: 0px 10px 0px 10px;
-        color: white;
-      }
-
-      .login label:nth-of-type(1) {
+      .login button:nth-of-type(1) {
         margin-left: auto;
       }
 
-      .login button:nth-of-type(1) {
-        margin-left: 10px;
-      }
-
-      .login input {
-        border: 1px solid white;
+      .login button {
+        border: 1px solid transparent;
         border-radius: 15px;
         background-color: transparent;
         outline: 0;
         padding: 3px;
         text-align: center;
-      }
-
-      .login button {
-        border-radius: 5px;
-        border: 1px solid gray;
+        margin: 0 5px;
       }
 
       .login button:hover {
         cursor: pointer;
         font-size: 15px;
         transition: 0.5s;
-        background-color: gray;
       }
 
       .header {
@@ -157,13 +134,14 @@
         padding: 3%;
         font-size: 16px;
       }
+
       figure.snip1200:hover {
         transition: 1s;
       }
 
       figure.snip1200 * {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+        /* -webkit-box-sizing: border-box;
+      box-sizing: border-box;*/
         -webkit-transition: all 0.45s ease-in-out;
         transition: all 0.45s ease-in-out;
       }
@@ -182,6 +160,7 @@
         bottom: 5%;
         border-width: 1px 1px 0;
       }
+
       figure.snip1200 figcaption.o {
         position: absolute;
         top: 5%;
@@ -199,6 +178,7 @@
         bottom: 50%;
         width: 100%;
       }
+
       figure.snip1200 .heading_o {
         overflow: hidden;
         -webkit-transform: translateY(50%);
@@ -207,6 +187,7 @@
         bottom: 15%;
         width: 100%;
       }
+
       figure.snip1200:hover .heading {
         bottom: 0;
       }
@@ -259,6 +240,7 @@
         flex-direction: row;
         height: 55%;
       }
+
       div.w_data_div {
         text-align: center;
         margin: 0 10px;
@@ -270,6 +252,7 @@
         display: flex;
         flex-direction: column;
       }
+
       div.w_data_o {
         top: 40%;
         -webkit-transform: translateY(-50%);
@@ -302,6 +285,7 @@
         flex: 1;
         padding: 3%;
       }
+
       figure.snip1200 a {
         left: 0;
         right: 0;
@@ -310,6 +294,7 @@
         position: absolute;
         z-index: 1;
       }
+
       /*
 
       figure.snip1200:hover img.weather,
@@ -323,16 +308,19 @@
       figure.snip1200:hover p {
         opacity: 0;
       }
+
       figure.snip1200:hover div.w_data,
       figure.snip1200:hover div.w_data_o {
         opacity: 1;
         -webkit-transition-delay: 0.35s;
         transition-delay: 0.35s;
       }
+
       div.location,
       div.time {
         display: flex;
       }
+
       div.location_a,
       div.time_a {
         font-size: 25px;
@@ -345,13 +333,11 @@
   <body>
     <div class="container">
       <div class="login">
-        <label>ID</label><input type="text" placeholder="ID를 입력하세요" />
-        <label>PW</label><input type="password" placeholder="PW를 입력하세요" />
         <button class="lg">
-          <a href="../weather_ootd/logout_001.html">login</a>
+          <a href="../ootd/mypage_001.html">mypage</a>
         </button>
         <button class="jo">
-          <a href="../weather_ootd/join_001.html">Join</a>
+          <a href="../ootd/first_grid_001.html">logout</a>
         </button>
       </div>
 
@@ -449,14 +435,14 @@
   <script>
     /* 왜 안되지?? */
     document
-      .querySelector("button.lg")
+      .querySelector("button.mp")
       .addEventListener("click", function (ev) {
-        alert("접속하였습니다");
+        alert("mypage로 이동합니다");
       });
     document
-      .querySelector("button.jo")
+      .querySelector("button.lg")
       .addEventListener("click", function (ev) {
-        alert("회원가입을 진행합니다");
+        alert("로그아웃 하였습니다");
       });
   </script>
 </html>
