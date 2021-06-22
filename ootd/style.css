@@ -1,0 +1,16 @@
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+
+  /*
+  가로의 한 넓이를 다 쓰는 걸로 columns: 1fr
+  높이는 다 써라 row:auto
+  간격 gap 20 px
+
+  */
+}

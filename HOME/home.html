@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        div.container {
-            border: 1px solid black;
-        }
+      div.container {
+        border: 1px solid black;
+      }
 
-        div.item {
-            border: 1px solid red;
-        }
+      div.item {
+        border: 1px solid red;
+      }
 
-        .container {
-            display: flex;
-            height: 15rem;
-        }
+      .container {
+        display: flex;
+        height: 15rem;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="item" style="align-self: center;">aaa</div>
-        <div class="item" style="align-self: flex-start;">Lorem </div>
-        <div class="item" style="align-self: flex-end;">ccc</div>
-        <div class="item" style="align-self: auto;">ddd</div>
-        <div class="item" style="align-self: auto;">eee</div>
+      <div class="item" style="align-self: center">aaa</div>
+      <div class="item" style="align-self: flex-start">Lorem</div>
+      <div class="item" style="align-self: flex-end">ccc</div>
+      <div class="item" style="align-self: auto">ddd</div>
+      <div class="item" style="align-self: auto">eee</div>
     </div>
-</body>
-
+  </body>
+  <script>
+    let ccode = e.target.closest("TR").dataset.ccode;
+  </script>
 </html>
