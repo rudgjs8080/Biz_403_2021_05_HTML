@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: rgb(230, 171, 62);
+        color: white;
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    nav {
+        background-color: rgb(192, 140, 44);
+        color: white;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    nav li {
+        padding: 12px 16px;
+    }
+
+    nav li:first-child {
+        padding-left: 20px;
+    }
+
+    nav li:hover {
+        cursor: pointer;
+        background-color: gray;
+    }
+
+    table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        text-align: center;
+        margin: 10px auto;
+        width: 90%;
+        
+    }
+
+    tr {
+        border-top: 2px solid black;
+    }
+
+    tr:last-child {
+        
+        border-bottom: 2px solid black;
+    }
+    th {
+        background-color: #ccc;
+    }
+    th, td{
+        
+        padding: 3px;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+    }
+    .main{
+        width:90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main div{
+        width:95%;
+        text-align: right;
+    }
+    button {
+        padding: 10px 15px 10px 15px;
+        text-align: center;
+        margin:5px;
+        color: white;
+    }
+    .b_1{
+        background-color: red;
+    }
+    .b_2{
+        background-color: green;
+
+    }
+    .b_3{
+        background-color: blue;
+    }
+</style>
+<body>
+    <header>
+        <h1>대한 고교 성적처리 2021 V1</h1>
+
+    </header>
+    <nav>
+        <ul>
+            <li>HOME</li>
+            <li>학생정보</li>
+            <li>학생 성적일람표</li>
+        </ul>
+    </nav>
+    <div class="main">
+    <table>
+        <tr>
+            <th>학번</th>
+            <th>이름</th>
+            <th>전공</th>
+            <th>학년</th>
+            <th>연락처</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>20210001</td>
+            <td>손흥민</td>
+            <td>체육학과</td>
+            <td>2</td>
+            <td>010-1111-1111</td>
+            <td>광주광역시</td>
+        </tr>
+        <tr>
+            <td>20210002</td>
+            <td>기성용</td>
+            <td>경제학과</td>
+            <td>3</td>
+            <td>010-2222-2222</td>
+            <td>광주광역시</td>
+        </tr>
+        <tr>
+            <td>20210003</td>
+            <td>박지성</td>
+            <td>컴공과</td>
+            <td>1</td>
+            <td>010-3333-3333</td>
+            <td>광주광역시</td>
+        </tr>
+    </table>
+    <div>
+        <button class="b_1">추가</button>
+        <button class="b_2">수정</button>
+        <button class="b_3">삭제</button>
+    </div>
+</div>
+</body>
+</html>
