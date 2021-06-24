@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  margin: 0;
+  margin: 1px;
   padding: 0;
   }
   .container{
@@ -8,7 +8,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10fr auto auto 30px;
+    grid-template-rows: 10fr 40fr 40fr 30px;
     grid-gap: 20px;
     
     /*
@@ -50,18 +50,13 @@
   flex-direction: column;
 }
 .log_join {
- justify-content: flex-end;
+ text-align: right;
  
 }
-.log_join label:nth-of-type(1) {
-  /*
-  오른쪽 정렬 ?? 
-  */
 
-}
 .item-2{
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto;
 
 }
@@ -70,6 +65,10 @@
 }
 .w_2{
   grid-column: 2/3;
+}
+.w_2 img{
+width: 100%;
+height: 100%;
 }
 .w_3{
   grid-column: 3/4;
@@ -92,15 +91,20 @@
 .item-3{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows:auto;
-  
+  grid-template-rows:auto; 
+}
+.o_1{
+  margin:3%;
+}
+.o_1 img{
+  width: 100%;
+  height: 100%;
 }
 
-
-@media screen and (min-width:970px){
+@media screen and (min-width:1240px){
     .container{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 25fr 80fr 30px;
+        grid-template-rows: 25fr 90fr 30px;
         
     }
     /*
@@ -118,7 +122,10 @@
         head로 사용 예정
         */
     }
-    
+    .item-2{
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 2fr 1fr;
+    }
     .item-4{
         grid-column: 1/3;
         /*
