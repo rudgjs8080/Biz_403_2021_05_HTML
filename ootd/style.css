@@ -26,7 +26,7 @@
     */
 }
 .container div{
-  border: 1px solid black;
+  
 }
 
 .card{
@@ -169,14 +169,14 @@ div.w_data_o {
   display: flex;
   height: 80%;
   flex-flow: row wrap;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   overflow: scroll;
 }
 
 div.w_data_div_o {
   position:inherit;
   flex: 1 1 35%;
-  border: 2px solid green;
+  /*border: 2px solid green;*/
   text-align: center;
   margin: 0 10px;
   flex-wrap: wrap;
@@ -185,7 +185,7 @@ div.w_data_div_o {
 }
 div.w_data_div_o img{
   width:50%;
-  border: 1px solid paleturquoise;
+  /*border: 1px solid paleturquoise;*/
   
 }
 
@@ -201,7 +201,7 @@ figure.snip1200:hover div.w_data_o {
 }
 
 
-@media screen and (min-width:1240px){
+@media screen and (min-width:1000px){
     .container{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 25fr 90fr 30px;
