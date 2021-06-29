@@ -58,11 +58,14 @@
   display:grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: auto;
-  flex-wrap: wrap;
+  font-size: auto;
 
 }
 .w_1 {
   grid-column: 1/2;
+  word-break: break-all;
+  
+  
 }
 .w_2{
   grid-column: 2/3;
