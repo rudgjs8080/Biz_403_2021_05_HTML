@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+        position: relative;
+        width: 200px;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+      }
+      ul li {
+        width: 90%;
+        position: absolute;
+        left: 0;
+        padding: 1rem;
+        color: white;
+        font-weight: 900;
+        color: black;
+        transform: translateX(-90%);
+        transition: 1s;
+      }
+      ul li:hover {
+        transform: translateX(-5%);
+      }
+      ul li:nth-of-type(1) {
+        top: 30px;
+        background-color: rgb(43, 4, 78);
+      }
+      ul li:nth-of-type(2) {
+        top: 90px;
+        opacity: 0;
+        background-color: red;
+      }
+      ul li:nth-of-type(3) {
+        top: 150px;
+        background-color: rgb(119, 151, 30);
+      }
+      ul li:nth-of-type(1):hover {
+        opacity: 0;
+      }
+      ul li:nth-of-type(1):hover + li:nth-of-type(2) {
+        opacity: 1;
+        transform: translateX(-5%);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>놀러</li>
+      <li>가고</li>
+      <li>싶다</li>
+    </ul>
+  </body>
+</html>
